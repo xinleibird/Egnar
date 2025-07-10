@@ -35,21 +35,21 @@ end
 
 function Egnar_OnUpdate()
 	if IsActionInRange(MeleeAttack) == 1 then
-		FontString1:SetText("Melee")
+		FontString1:SetText("肉搏")
 		SetColor(unpack({ 0, 1, 0, 0.7 }))
 	elseif IsActionInRange(RangedAttack) == 1 then
 		if CheckInteractDistance("target", 4) then
-			FontString1:SetText("In Range")
+			FontString1:SetText("可射")
 			SetColor(unpack({ 0, 0.5, 1, 0.7 }))
 		else
-			FontString1:SetText("Long Range")
+			FontString1:SetText("极射")
 			SetColor(unpack({ 0, 0, 1, 0.7 }))
 		end
 	elseif CheckInteractDistance("target", 4) then
-		FontString1:SetText("Dead Zone")
+		FontString1:SetText("死区")
 		SetColor(unpack({ 1, 0.5, 0, 0.7 }))
 	else
-		FontString1:SetText("Out of Range")
+		FontString1:SetText("不及")
 		SetColor(unpack({ 1, 0, 0, 0.7 }))
 	end
 end

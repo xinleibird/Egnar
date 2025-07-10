@@ -2,7 +2,7 @@
 	<Script file="Egnar.lua" />
 	<Frame name="Egnar_Frame" parent="UIParent" toplevel="true" movable="true" enableMouse="true">
 		<Size>
-			<AbsDimension x="135" y="35" />
+			<AbsDimension x="85" y="35" />
 		</Size>
 		<Anchors>
 			<Anchor point="TOPLEFT" relativeTo="UIParent" />
