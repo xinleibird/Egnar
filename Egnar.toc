@@ -1,7 +1,7 @@
 ## Interface: 11200
 ## Title: Egnar
-## Notes: Show a range indicator for hunters
-## Author: Erodjan
-## Version: 0.1
+## Notes: Show a range indicator for rogues
+## Author: xinleibird@gmail.com
+## Version: 0.2
 
 Egnar.xml

@@ -1,0 +1,19 @@
+{
+    "diagnostics.globals": [
+        "Egnar_Frame",
+        "DEFAULT_CHAT_FRAME",
+        "FontString1",
+        "UnitClass",
+        "IsActionInRange",
+        "CheckInteractDistance",
+        "UnitCanAttack",
+        "UnitExists",
+        "UnitIsDead",
+        "UnitXP",
+        "UnitXP_SP3",
+        "GetTime",
+        "IsControlKeyDown",
+        "IsShiftKeyDown",
+        "IsAltKeyDown"
+    ]
+}

@@ -1,15 +1,15 @@
 <Ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.blizzard.com/wow/ui/">
 	<Script file="Egnar.lua" />
-	<Frame name="Egnar_Frame" parent="UIParent" toplevel="true" movable="true" enableMouse="true">
+	<Frame name="Egnar_Frame" parent="UIParent" toplevel="true" movable="true" enableMouse="true" frameStrata="BACKGROUND">
 		<Size>
-			<AbsDimension x="135" y="35" />
+			<AbsDimension x="85" y="35" />
 		</Size>
 		<Anchors>
 			<Anchor point="TOPLEFT" relativeTo="UIParent" />
 		</Anchors>
 		<Scripts>
 			<OnLoad>
-				Egnar_OnLoad();
+				Egnar_OnLoad(this);
 			</OnLoad>
 		</Scripts>
 		<Layers>

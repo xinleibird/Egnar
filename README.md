@@ -1,8 +1,33 @@
 # Egnar
-WoW 1.12.1 addon. Show a range indicator for hunters.
 
-This addon will not work unless you are a hunter and have learned Wing Clip, this since it uses Wing Clip to check melee distance to target.
+WoW 1.12.1 插件。为盗贼显示目标的距离与方向指示器。
 
-You need to configure the action slot for Wing Clip and Auto Shot by editing the lua code. Change the first lines in Egnar.lua. [Figure out what spot your Auto Shot is on](https://i.imgur.com/VGArn.jpg). This addon WILL NOT WORK if this is not done.
+根据目标在你的近战范围 / 射击范围内，显示不同文字与颜色：
+
+| 状态        | 含义                               |
+| ----------- | ---------------------------------- |
+| 背后 (绿) | 近战范围，且处于目标背后 |
+| 直面 (黄) | 近战范围，且处于目标正面 |
+| 肉搏 (绿) | 近战范围（无法检测方位时自动降级） |
+| 可射 (浅蓝) | 射击范围内，且可交互 |
+| 极射 (蓝) | 射击范围内，但距离过远 |
+| 死区 (红) | 近战范围内但武器够不到 |
+| 不及 (橙) | 超出射击范围 |
+
+## 配置
+
+按你的动作条槽位修改 `Egnar.lua` 开头的两个常量：
+
+```lua
+local MeleeAttack = 59   -- 近战技能所在槽位
+local RangedAttack = 63  -- 投掷/射击技能所在槽位
+```
+
+插件只会为盗贼加载（`Egnar_OnLoad` 会检测职业）。
+
+## 背后检测
+
+`背后 / 直面` 判定依赖怀旧服私有 API `UnitXP` 及其探针 `UnitXP_SP3`。
+当两者不可用时自动降级为 `肉搏`，不会报错。
 
 ![screenshot](screenshot.png)
