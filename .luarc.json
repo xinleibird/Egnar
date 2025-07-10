@@ -1,0 +1,15 @@
+{
+    "diagnostics.globals": [
+        "Egnar_Frame",
+        "cl",
+        "DEFAULT_CHAT_FRAME",
+        "FontString1",
+        "UnitClass",
+        "this",
+        "IsActionInRange",
+        "CheckInteractDistance",
+        "UnitCanAttack",
+        "UnitExists",
+        "UnitIsDead"
+    ]
+}
