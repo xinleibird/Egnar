@@ -1,5 +1,5 @@
 -- Change to values corresponding to your setup
-local MeleeAttack = 2
+local MeleeAttack = 59
 local RangedAttack = 63
 
 function Egnar_OnLoad()
