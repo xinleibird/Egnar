@@ -35,8 +35,18 @@ end
 
 function Egnar_OnUpdate()
 	if IsActionInRange(MeleeAttack) == 1 then
-		FontString1:SetText("肉搏")
-		SetColor(unpack({ 0, 1, 0, 0.7 }))
+		if UnitXP_SP3 then
+			if UnitXP("behind", "player", "target") then
+				FontString1:SetText("肉搏[背]")
+				SetColor(unpack({ 0, 1, 0, 0.7 }))
+			else
+				FontString1:SetText("肉搏[正]")
+				SetColor(unpack({ 0, 1, 0, 0.7 }))
+			end
+		else
+			FontString1:SetText("肉搏")
+			SetColor(unpack({ 0, 1, 0, 0.7 }))
+		end
 	elseif IsActionInRange(RangedAttack) == 1 then
 		if CheckInteractDistance("target", 4) then
 			FontString1:SetText("可射")

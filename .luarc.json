@@ -10,6 +10,8 @@
         "CheckInteractDistance",
         "UnitCanAttack",
         "UnitExists",
-        "UnitIsDead"
+        "UnitIsDead",
+        "UnitXP",
+        "UnitXP_SP3"
     ]
 }
