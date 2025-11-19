@@ -37,11 +37,11 @@ function Egnar_OnUpdate()
 	if IsActionInRange(MeleeAttack) == 1 then
 		if UnitXP_SP3 then
 			if UnitXP("behind", "player", "target") then
-				FontString1:SetText("肉搏[背]")
-				SetColor(unpack({ 0, 1, 0, 0.7 }))
+				FontString1:SetText("背后")
+				SetColor(unpack({ 0, 1, 0, 1 }))
 			else
-				FontString1:SetText("肉搏[正]")
-				SetColor(unpack({ 0, 1, 0, 0.7 }))
+				FontString1:SetText("正面")
+				SetColor(unpack({ 1, 0, 0, 1 }))
 			end
 		else
 			FontString1:SetText("肉搏")
