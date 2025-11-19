@@ -37,15 +37,15 @@ function Egnar_OnUpdate()
 	if IsActionInRange(MeleeAttack) == 1 then
 		if UnitXP_SP3 then
 			if UnitXP("behind", "player", "target") then
-				FontString1:SetText("背后")
+				FontString1:SetText("背地")
 				SetColor(unpack({ 0, 1, 0, 1 }))
 			else
-				FontString1:SetText("正面")
+				FontString1:SetText("直面")
 				SetColor(unpack({ 1, 0, 0, 1 }))
 			end
 		else
 			FontString1:SetText("肉搏")
-			SetColor(unpack({ 0, 1, 0, 0.7 }))
+			SetColor(unpack({ 0, 1, 0, 1 }))
 		end
 	elseif IsActionInRange(RangedAttack) == 1 then
 		if CheckInteractDistance("target", 4) then
@@ -57,10 +57,10 @@ function Egnar_OnUpdate()
 		end
 	elseif CheckInteractDistance("target", 4) then
 		FontString1:SetText("死区")
-		SetColor(unpack({ 1, 0.5, 0, 0.7 }))
+		SetColor(unpack({ 1, 0.5, 0, 0.3 }))
 	else
 		FontString1:SetText("不及")
-		SetColor(unpack({ 1, 0, 0, 0.7 }))
+		SetColor(unpack({ 1, 0.5, 0, 0.3 }))
 	end
 end
 
